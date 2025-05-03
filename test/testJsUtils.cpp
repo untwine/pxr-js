@@ -1,17 +1,18 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file testenv/testJsUtils.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/utils.h"
-#include "pxr/base/tf/diagnosticLite.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/utils.h>
+#include <pxr/tf/diagnosticLite.h>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 int main(int argc, char const *argv[])
 {

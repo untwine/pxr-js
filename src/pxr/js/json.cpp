@@ -1,30 +1,25 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file js/json.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
+#include "pxr/js/pxr.h"
+#include "pxr/js/json.h"
 
-#include "pxr/base/tf/diagnostic.h"
-#include "pxr/base/tf/stringUtils.h"
+#include <pxr/tf/diagnostic.h>
+#include <pxr/tf/stringUtils.h>
 
 #include <iostream>
 #include <vector>
 
-#if PXR_USE_NAMESPACES
-#define PXRJS PXR_NS
-#else
-#define PXRJS PXRJS
-#endif
-
 // Place rapidjson into a namespace to prevent conflicts with d2.
-#define RAPIDJSON_NAMESPACE PXRJS::rapidjson
-#define RAPIDJSON_NAMESPACE_BEGIN namespace PXRJS { namespace rapidjson {
+#define RAPIDJSON_NAMESPACE JS_NS::rapidjson
+#define RAPIDJSON_NAMESPACE_BEGIN namespace JS_NS { namespace rapidjson {
 #define RAPIDJSON_NAMESPACE_END } }
 
 #include "rapidjson/allocators.h"
@@ -38,7 +33,7 @@
 namespace rj = RAPIDJSON_NAMESPACE;
 
 namespace {
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 struct _InputHandler : public rj::BaseReaderHandler<rj::UTF8<>, _InputHandler>
 {
@@ -138,7 +133,7 @@ public:
 
 }
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 template <typename Allocator>
 static rj::Value
@@ -545,4 +540,4 @@ bool JsWriter::EndArray( )
     return _impl->GetWriter()->EndArray();
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE

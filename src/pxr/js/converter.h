@@ -1,19 +1,20 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
-#ifndef PXR_BASE_JS_CONVERTER_H
-#define PXR_BASE_JS_CONVERTER_H
+// Modified by Jeremy Retailleau.
+
+#ifndef PXR_JS_CONVERTER_H
+#define PXR_JS_CONVERTER_H
 
 /// \file js/converter.h
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/value.h"
-#include "pxr/base/tf/diagnostic.h"
+#include "pxr/js/pxr.h"
+#include "pxr/js/value.h"
+#include <pxr/tf/diagnostic.h>
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 // Converts a \c JsValue \p value holding an \c int value to a \c ValueType
 // holding an \c int64_t.
@@ -123,6 +124,6 @@ ValueType JsConvertToContainerType(const JsValue& value) {
     return JsValueTypeConverter<ValueType, MapType>::Convert(value);
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE
 
-#endif // PXR_BASE_JS_CONVERTER_H
+#endif // PXR_JS_CONVERTER_H

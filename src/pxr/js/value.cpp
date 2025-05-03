@@ -1,21 +1,22 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file js/value.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/value.h"
-#include "pxr/base/tf/diagnostic.h"
-#include "pxr/base/tf/staticData.h"
-#include "pxr/base/tf/stringUtils.h"
+#include "pxr/js/pxr.h"
+#include "pxr/js/value.h"
+#include <pxr/tf/diagnostic.h>
+#include <pxr/tf/staticData.h>
+#include <pxr/tf/stringUtils.h>
 
 #include <variant>
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 /// \struct Js_Null
 /// A sentinel type held by default constructed JsValue objects, which
@@ -429,4 +430,4 @@ JsValue::operator!=(const JsValue& other) const
     return !(*this == other);
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE
