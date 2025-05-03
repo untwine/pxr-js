@@ -7,13 +7,13 @@
 ///
 /// \file js/value.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/value.h"
-#include "pxr/base/tf/diagnostic.h"
-#include "pxr/base/tf/staticData.h"
-#include "pxr/base/tf/stringUtils.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/value.h>
+#include <pxr/tf/diagnostic.h>
+#include <pxr/tf/staticData.h>
+#include <pxr/tf/stringUtils.h>
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 // Variant type index that specifies a uint64_t value is held.
 //
@@ -430,4 +430,4 @@ JsValue::operator!=(const JsValue& other) const
     return !(*this == other);
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE

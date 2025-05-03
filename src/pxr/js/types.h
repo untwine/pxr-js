@@ -9,18 +9,18 @@
 
 /// \file js/types.h
 
-#include "pxr/pxr.h"
+#include <pxr/js/pxr.h>
 
 #include <map>
 #include <string>
 #include <vector>
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 class JsValue;
 typedef std::map<std::string, JsValue> JsObject;
 typedef std::vector<JsValue> JsArray;
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE
 
 #endif // PXR_BASE_JS_TYPES_H

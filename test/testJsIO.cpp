@@ -7,13 +7,13 @@
 ///
 /// \file testenv/testJsIO.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/json.h>
 
 #include <iostream>
 #include <fstream>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 int main(int argc, char const *argv[])
 {

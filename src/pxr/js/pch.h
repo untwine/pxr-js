@@ -8,8 +8,8 @@
 //
 
 #define TF_MAX_ARITY 7
-#include "pxr/pxr.h"
-#include "pxr/base/arch/defines.h"
+#include <pxr/js/pxr.h>
+#include <pxr/arch/defines.h>
 #if defined(ARCH_OS_LINUX)
 #include <unistd.h>
 #endif

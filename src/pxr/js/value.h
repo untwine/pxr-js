@@ -9,10 +9,10 @@
 
 /// \file js/value.h
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/api.h"
-#include "pxr/base/js/types.h"
-#include "pxr/base/tf/delegatedCountPtr.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/api.h>
+#include <pxr/js/types.h>
+#include <pxr/tf/delegatedCountPtr.h>
 
 #include <algorithm>
 #include <atomic>
@@ -22,7 +22,7 @@
 #include <variant>
 #include <vector>
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 // Value API Version
 // 1 (or undefined) - Initial version.
@@ -340,6 +340,6 @@ inline bool JsValue::IsArrayOf() const
                        [](const JsValue& v) { return v.Is<T>(); });
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE
 
 #endif // PXR_BASE_JS_VALUE_H

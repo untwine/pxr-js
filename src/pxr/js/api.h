@@ -7,7 +7,7 @@
 #ifndef PXR_BASE_JS_API_H
 #define PXR_BASE_JS_API_H
 
-#include "pxr/base/arch/export.h"
+#include <pxr/arch/export.h>
 
 #if defined(PXR_STATIC)
 #   define JS_API

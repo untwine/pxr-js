@@ -7,13 +7,13 @@
 ///
 /// \file js/json.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/json.h>
 
-#include "pxr/base/tf/diagnostic.h"
-#include "pxr/base/tf/hash.h"
-#include "pxr/base/tf/pxrTslRobinMap/robin_set.h"
-#include "pxr/base/tf/stringUtils.h"
+#include <pxr/tf/diagnostic.h>
+#include <pxr/tf/hash.h>
+#include <pxr/tf/pxrTslRobinMap/robin_set.h>
+#include <pxr/tf/stringUtils.h>
 
 #include <istream>
 #include <ostream>
@@ -21,15 +21,9 @@
 #include <utility>
 #include <vector>
 
-#if PXR_USE_NAMESPACES
-#define PXRJS PXR_NS
-#else
-#define PXRJS PXRJS
-#endif
-
 // Place rapidjson into a namespace to prevent conflicts with d2.
-#define RAPIDJSON_NAMESPACE PXRJS::rapidjson
-#define RAPIDJSON_NAMESPACE_BEGIN namespace PXRJS { namespace rapidjson {
+#define RAPIDJSON_NAMESPACE PXR_NS::rapidjson
+#define RAPIDJSON_NAMESPACE_BEGIN namespace PXR_NS { namespace rapidjson {
 #define RAPIDJSON_NAMESPACE_END } }
 
 #include "rapidjson/allocators.h"
@@ -44,7 +38,7 @@
 namespace rj = RAPIDJSON_NAMESPACE;
 
 namespace {
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 struct _InputHandler : public rj::BaseReaderHandler<rj::UTF8<>, _InputHandler>
 {
@@ -201,7 +195,7 @@ private:
 
 }
 
-PXR_NAMESPACE_OPEN_SCOPE
+JS_NAMESPACE_OPEN_SCOPE
 
 template <typename Allocator>
 static rj::Value
@@ -638,4 +632,4 @@ bool JsWriter::EndArray( )
     return _impl->GetWriter()->EndArray();
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+JS_NAMESPACE_CLOSE_SCOPE

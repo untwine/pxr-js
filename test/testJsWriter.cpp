@@ -7,14 +7,14 @@
 ///
 /// \file testenv/testJsWriter.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
-#include "pxr/base/tf/diagnostic.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/json.h>
+#include <pxr/tf/diagnostic.h>
 
 #include <fstream>
 #include <limits>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 static JsWriter::Style
 StyleFromArg(const std::string& styleStr)

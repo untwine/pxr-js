@@ -7,14 +7,14 @@
 ///
 /// \file testenv/testJsDouble.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
-#include "pxr/base/tf/diagnosticLite.h"
+#include <pxr/js/pxr.h>
+#include <pxr/js/json.h>
+#include <pxr/tf/diagnosticLite.h>
 
 #include <iostream>
 #include <sstream>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+JS_NAMESPACE_USING_DIRECTIVE
 
 void TestStreamInterface(const double d)
 {
