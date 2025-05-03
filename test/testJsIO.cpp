@@ -1,19 +1,19 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file testenv/testJsIO.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
+#include <pxr/js/json.h>
 
 #include <iostream>
 #include <fstream>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+using namespace pxr;
 
 int main(int argc, char const *argv[])
 {

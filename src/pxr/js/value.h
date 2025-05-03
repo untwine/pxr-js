@@ -1,17 +1,17 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
-#ifndef PXR_BASE_JS_VALUE_H
-#define PXR_BASE_JS_VALUE_H
+// Modified by Jeremy Retailleau.
+
+#ifndef PXR_JS_VALUE_H
+#define PXR_JS_VALUE_H
 
 /// \file js/value.h
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/api.h"
-#include "pxr/base/js/types.h"
+#include "./api.h"
+#include "./types.h"
 
 #include <algorithm>
 #include <cstdint>
@@ -20,7 +20,7 @@
 #include <type_traits>
 #include <vector>
 
-PXR_NAMESPACE_OPEN_SCOPE
+namespace pxr {
 
 // Value API Version
 // 1 (or undefined) - Initial version.
@@ -274,6 +274,6 @@ inline bool JsValue::IsArrayOf() const
                        [](const JsValue& v) { return v.Is<T>(); });
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+}  // namespace pxr
 
-#endif // PXR_BASE_JS_VALUE_H
+#endif // PXR_JS_VALUE_H

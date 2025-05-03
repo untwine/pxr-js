@@ -1,24 +1,23 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
 
-#ifndef PXR_BASE_JS_JSON_H
-#define PXR_BASE_JS_JSON_H
+#ifndef PXR_JS_JSON_H
+#define PXR_JS_JSON_H
 
 /// \file js/json.h
 /// Top-level entrypoints for reading and writing JSON.
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/api.h"
-#include "pxr/base/js/value.h"
+#include "./api.h"
+#include "./value.h"
 
 #include <iosfwd>
 #include <string>
 
-PXR_NAMESPACE_OPEN_SCOPE
+namespace pxr {
 
 /// \struct JsParseError
 ///
@@ -213,6 +212,6 @@ private:
 /// Write a json value.
 JS_API void JsWriteValue(JsWriter* writer, const JsValue& value);
 
-PXR_NAMESPACE_CLOSE_SCOPE
+}  // namespace pxr
 
-#endif // PXR_BASE_JS_JSON_H
+#endif // PXR_JS_JSON_H

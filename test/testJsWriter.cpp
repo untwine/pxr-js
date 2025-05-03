@@ -1,20 +1,20 @@
-//
 // Copyright 2018 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file testenv/testJsWriter.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/json.h"
-#include "pxr/base/tf/diagnostic.h"
+#include <pxr/js/json.h>
+#include <pxr/tf/diagnostic.h>
 
 #include <fstream>
 #include <limits>
 
-PXR_NAMESPACE_USING_DIRECTIVE
+using namespace pxr;
 
 static JsWriter::Style
 StyleFromArg(const std::string& styleStr)

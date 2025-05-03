@@ -1,17 +1,17 @@
-//
 // Copyright 2016 Pixar
 //
 // Licensed under the terms set forth in the LICENSE.txt file available at
 // https://openusd.org/license.
 //
+// Modified by Jeremy Retailleau.
+
 ///
 /// \file js/utils.cpp
 
-#include "pxr/pxr.h"
-#include "pxr/base/js/utils.h"
-#include "pxr/base/tf/diagnostic.h"
+#include "./utils.h"
+#include <pxr/tf/diagnostic.h>
 
-PXR_NAMESPACE_OPEN_SCOPE
+namespace pxr {
 
 JsOptionalValue
 JsFindValue(
@@ -31,4 +31,4 @@ JsFindValue(
     return defaultValue;
 }
 
-PXR_NAMESPACE_CLOSE_SCOPE
+}  // namespace pxr
